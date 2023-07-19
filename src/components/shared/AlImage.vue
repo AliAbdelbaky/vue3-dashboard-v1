@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import {computed, nextTick, onMounted, ref} from 'vue'
+// @ts-ignore
 import UrlValidator from '@/utils/imageURLValidator'
 // @ts-ignore
 import fallBack from "@/assets/images/disk.jpg";
@@ -70,7 +71,6 @@ onMounted(async () => {
 img {
   transition: all 0.2s ease-in-out;
   filter: blur(0px);
-  //background: var(--accent);
   &.lazy-load {
     filter: blur(10px);
   }
