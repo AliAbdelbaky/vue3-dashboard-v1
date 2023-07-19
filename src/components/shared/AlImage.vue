@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {computed, defineProps, nextTick, onMounted, ref} from 'vue'
+import {computed, nextTick, onMounted, ref} from 'vue'
 import UrlValidator from '@/utils/imageURLValidator'
 // @ts-ignore
 import fallBack from "@/assets/images/disk.jpg";
