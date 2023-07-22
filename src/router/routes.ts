@@ -27,7 +27,7 @@ const dashboard_routes: RouteRecordRaw[] = [
         component: d_homepage
     },
     {
-        path: getRoutePath('dashboard', 'about'),
+        path: 'about',
         name: getRouteName('dashboard', 'about'),
         component: () => import('@/views/dashboard/AboutView.vue')
     }
