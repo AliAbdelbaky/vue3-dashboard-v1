@@ -1,22 +1,25 @@
 <script lang="ts" setup>
-import {RouterLink, RouterView} from 'vue-router'
-import AlImage from "@/components/shared/AlImage.vue";
+import {watch} from 'vue'
+import {RouterLink, RouterView, useRoute} from 'vue-router'
+
+const route = useRoute()
+watch(() => route.name, (vv) => {
+  console.log(vv)
+})
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" height="125" src="@/assets/logo.svg" width="125"/>
-
-    <div class="wrapper">
-      <h2 class=" text tw-uppercase tw-text-black ">hello</h2>
-      <al-image class="tw-w-[250px]" src="invalidURL" alt="invalidURL" />
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
+  <ol>
+    <li>
+      <RouterLink :to="{name:'auth-login'}">login</RouterLink>
+    </li>
+    <li>
+      <RouterLink :to="{name:'dashboard-home'}">homepage</RouterLink>
+    </li>
+    <li>
+      <RouterLink :to="{name:'dashboard-about'}">about us</RouterLink>
+    </li>
+  </ol>
   <RouterView/>
 </template>
 
