@@ -2,12 +2,12 @@ const LOGIN_PATH = {
     name: 'auth-login'
 };
 
-export async function AuthGuard(to, from, next) {
+export async function AuthGuard(to: any, from: any, next: any) {
     const token = true;
 
 
     if (!token) {
-        return  next(LOGIN_PATH)
+        return next(LOGIN_PATH)
     }
 
 
